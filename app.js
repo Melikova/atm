@@ -15,7 +15,10 @@ class Card{
 
     #get_time(){
         let today = new Date();
-        return today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        let seconds = today.getSeconds()<10 ? `0${today.getSeconds()}` : today.getSeconds();
+        let minutes = today.getMinutes()<10 ? `0${today.getMinutes()}` : today.getMinutes();
+        let hours = today.getHours()<10 ? `0${today.getHours()}` : today.getHours();
+        return `${hours}:${minutes}:${seconds}`;
     }
 
     deposit(){ 
