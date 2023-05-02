@@ -27,6 +27,7 @@ class Card{
             this.balance+=this.#get_amount();
             this.#show_balance();
             this.#recent_transactions();
+            this.amount_input.value='';
         }else{
             alert('Insert the correct amount, please');
         }
@@ -39,6 +40,7 @@ class Card{
                 this.balance-=this.#get_amount();
                 this.#show_balance();
                 this.#recent_transactions();
+                this.amount_input.value='';
             }else{
                 alert('Insufficient funds');
             }
